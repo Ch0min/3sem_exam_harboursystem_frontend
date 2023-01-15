@@ -1,0 +1,114 @@
+/* SIGN IN AND SIGN UP CARD LAYOUT */
+.signin {
+    position: relative;
+    padding: 16px;
+    max-width: 400px;
+    min-height: 400px;
+    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.5);
+    margin: 5% auto 0;
+    border-radius: 25px;
+    background-size: cover;
+}
+
+.signup {
+    position: relative;
+    padding: 16px;
+    max-width: 400px;
+    min-height: 400px;
+    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.5);
+    margin: 3% auto 0;
+    border-radius: 25px;
+    background-size: cover;
+}
+
+input[type=text], input[type=password], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* HARBOUR LAYOUT */
+
+
+/* Pattern styles */
+.harbour-container {
+    display: grid;
+}
+
+.harbour1-content {
+    grid-column: 1;
+    display: block;
+    margin: 5% 18%;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #04444b;
+    padding: 0;
+    font-family: Arial, Times, serif;
+    max-height: 1024px;
+}
+
+
+.harbour2-content {
+    grid-column: 2;
+    display: block;
+    margin: 5% 10%;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #04444b;
+    padding: 0;
+    font-family: Arial, Times, serif;
+    max-height: 1024px;
+}
+
+.harbour1-content p,
+.harbour2-content p {
+    margin: auto;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: sans-serif;
+    display: block;
+    padding: 10px 5px;
+    max-width: 768px;
+    max-height: 1024px;
+
+}
+
+/* Kastrup Havn Table Layout */
+.kastrup-table {
+
+}
+
+/* View Owners of a Boat */
+.owner-boat-container {
+    display: grid;
+}
+
+.userview-header {
+    grid-column: 2;
+    border: 1px solid black;
+    border-top-width: 2px;
+    font-size: small;
+    margin: 10px;
+    width: 80%;
+    background-color: white;
+
+}
+
+.userview-content {
+    grid-column: 2;
+    border: 1px solid black;
+    height: 20px;
+    font-size: small;
+
+}
+
+
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:hover {background-color: #ddd;}
+
+
+
+
+

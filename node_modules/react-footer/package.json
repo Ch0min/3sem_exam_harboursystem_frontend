@@ -1,0 +1,19 @@
+{
+  "name": "react-footer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calvinwoo/react-footer.git"
+  },
+  "author": "Calvin Woo <calvinwoo32@gmail.com> (http://calvinwoo.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calvinwoo/react-footer/issues"
+  },
+  "homepage": "https://github.com/calvinwoo/react-footer"
+}
