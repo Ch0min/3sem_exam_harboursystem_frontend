@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-PROJECT_NAME="dat3_startcode_frontend"
-DROPLET_URL="157.230.127.186"
+PROJECT_NAME="harboursystem"
+DROPLET_URL="markchomin.com"
 
 ##echo -n "please enter the project name as it appears on the server in /var/www/"
 ##read -r
