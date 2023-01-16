@@ -13,7 +13,7 @@ function OwnersOverview({ownerFacade}) {
     }, [])
 
     return (
-        <div>
+        <div className="table-styling">
             <h1>BOAT OWNERS</h1>
                 <table>
                     <thead>

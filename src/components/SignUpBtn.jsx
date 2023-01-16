@@ -6,7 +6,7 @@ function SignUpBtn() {
 
     return (
         <div className="login-container">
-            <button onClick={() => navigate("/signup")}>Sign Up</button>
+            <button onClick={() => navigate("/signup")}>SIGN UP</button>
         </div>
     );
 }

@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import boatFacade from "../utils/boatFacade.js";
 
-import "../styles/styles.css";
-
 function HarbourKastrupHavn(props) {
     const [boats, setBoats] = useState([])
     const [viewOwners, setViewOwners] = useState(0)
@@ -18,7 +16,7 @@ function HarbourKastrupHavn(props) {
     }, []);
 
     return (
-        <div className="kastrup-table">
+        <div className="table-styling">
             <h1>KASTRUP LYSTBÅDEHAVN</h1>
             <table>
                 <thead>
@@ -52,9 +50,10 @@ function HarbourKastrupHavn(props) {
                                         >Hide
                                         </button>}
                                 </td>
-
                                 {data.owners.map((owner) => {
+
                                         if (data.boatID === viewOwners) {
+
                                             return (
                                                     <tr key={owner.ownerID}>
                                                         <td>{owner.user.userName}</td>

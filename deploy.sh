@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-PROJECT_NAME="harboursystem"
-DROPLET_URL="markchomin.com"
+PROJECT_NAME="harbour"
+DROPLET_URL="157.230.127.186"
 
 ##echo -n "please enter the project name as it appears on the server in /var/www/"
 ##read -r

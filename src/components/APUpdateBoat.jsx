@@ -50,8 +50,8 @@ function APUpdateBoat(props) {
                             <th>BOAT MAKE</th>
                             <th>BOAT NAME</th>
                             <th>BOAT IMAGE</th>
-                            <th>HARBOR ID</th>
-                            <th></th>
+                            <th>HARBOUR ID</th>
+                            <th>HARBOUR NAME</th>
                             <th></th>
                         </tr>
                         </thead>
@@ -61,8 +61,8 @@ function APUpdateBoat(props) {
                                 return (
                                     <tr key={data.boatID}>
                                         <td>
-                                            <input type="number" placeholder={data.boatID} name="boat_id" id="boatID"
-                                                   value={infoInput.boatID}/>
+                                            <input type="number" placeholder={data.boatID} name="boat_id"
+                                                   id="boatID"/>
                                         </td>
                                         <td>
                                             <input type="text" placeholder={data.boatBrand} name="boat_brand"
@@ -80,6 +80,7 @@ function APUpdateBoat(props) {
                                             <input type="text" placeholder={data.boatImage} name="boat_image"
                                                    id="boatImage"/>
                                         </td>
+                                        <td></td>
                                         <td>
                                             <select defaultValue={data.harbour.harbourID} name="harbour_id"
                                                     id="harbourID">
@@ -89,12 +90,11 @@ function APUpdateBoat(props) {
                                             </select>
                                         </td>
                                         <td>
-                                            <button onClick={performUpdate} type="submit">Submit Changes</button>
-                                        </td>
-                                        <td>
-                                            <button onClick={() => {
+                                            <button className="btn-standard" onClick={performUpdate} type="submit"><i className="fa fa-mail-forward"></i> Submit</button>
+                                            <br/>
+                                            <button className="btn-cancel" onClick={() => {
                                                 setUpdate(0)
-                                            }}>Cancel
+                                            }}><i className="fa fa-close"></i> Cancel
                                             </button>
                                         </td>
                                     </tr>
@@ -109,18 +109,17 @@ function APUpdateBoat(props) {
                                             <td>{data.boatName}</td>
                                             <td>{data.boatImage}</td>
                                             <td>{data.harbour.harbourID}</td>
+                                            <td>{data.harbour.harbourName}</td>
                                             <td>
-                                                <button onClick={() => {
+                                                <button className="btn-standard" onClick={() => {
                                                     setUpdate(data.boatID)
-                                                }}>Update
+                                                }}><i className="fa fa-pencil"></i> Update
                                                 </button>
-                                            </td>
-                                            <td>
-                                                <button onClick={() => {
+                                                <br/>
+                                                <button className="btn-trash" onClick={() => {
                                                     boatFacade.deleteBoat(data.boatID)
                                                         .then(() => props.setRefresh(false))   // Still refreshes the site
-                                                }}>Delete
-                                                </button>
+                                                }}><i className="fa-solid fa fa-trash"></i> delete</button>
                                             </td>
                                         </tr>
                                     </>

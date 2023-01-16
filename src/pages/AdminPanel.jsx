@@ -7,7 +7,7 @@ function AdminPanel() {
     const [refresh, setRefresh] = useState(false);
 
     return (
-        <>
+        <div className="table-styling">
             <h1>ADMIN PANEL</h1>
 
             <div>
@@ -30,7 +30,7 @@ function AdminPanel() {
 
             <br/>
             <br/>
-        </>
+        </div>
     );
 }
 

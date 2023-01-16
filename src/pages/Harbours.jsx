@@ -10,7 +10,7 @@ function Harbours() {
     const navigate = useNavigate()
 
     return (
-        <>
+        <div className="harbours-content">
             <h1>HARBOURS</h1>
             <div className="harbour-container">
                 <div className="harbour1-content">
@@ -21,7 +21,7 @@ function Harbours() {
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     </p>
-                    <button onClick={() => navigate("/harbourkastruphavn")}>See Boats</button>
+                    <button className="harbours-btn" onClick={() => navigate("/harbourkastruphavn")}>SEE BOATS</button>
                 </div>
                 <div className="harbour2-content">
                     <img src={kmarina} width="500px" height="250px"/>
@@ -31,11 +31,11 @@ function Harbours() {
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     </p>
-                    <button onClick={() => navigate("/harbourkoegemarina")}>See Boats</button>
+                    <button className="harbours-btn" onClick={() => navigate("/harbourkoegemarina")}>SEE BOATS</button>
                 </div>
             </div>
 
-        </>
+        </div>
     );
 }
 

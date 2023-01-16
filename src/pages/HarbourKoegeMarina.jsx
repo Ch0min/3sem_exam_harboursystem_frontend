@@ -18,7 +18,7 @@ function HarbourKoegeMarina(props) {
     }, []);
 
     return (
-        <div className="tableBody">
+        <div className="table-styling">
             <h1>KØGE MARINA</h1>
             <table>
                 <thead>

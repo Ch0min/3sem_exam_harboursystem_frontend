@@ -14,7 +14,7 @@ export default function LoggedIn(props) {
 
     return (
         <div className="login-container">
-            <button onClick={logout}>Logout</button>
+            <button onClick={logout}>LOG OUT</button>
         </div>
     )
 

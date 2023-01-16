@@ -19,7 +19,7 @@ function SignIn(props) {
 // Exception messages
     const login = (user, pass) => {
         loginFacade.login(user, pass)
-            .then(res => props.setLoggedIn(true))
+            .then(() => props.setLoggedIn(true))
             .catch(async err => {
                 if (err.status) {
                     setError(await err.fullError.then(e => e.message))
@@ -52,7 +52,7 @@ function SignIn(props) {
             <p>_________________________________________</p>
             <form>
                 <p className="signup-p">Don't have an account yet? Sign up now!</p>
-                <button onClick={handleSignUp} className="signup-btn">Sign Up</button>
+                <button className="signup-btn" onClick={handleSignUp}>Sign Up</button>
             </form>
         </div>
     )

@@ -1,6 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: sans-serif;
   line-height: 24px;
   font-weight: 400;
 
@@ -8,7 +13,7 @@
   align-items: center;     /* center items vertically, in this case */
 
   color: black;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.87);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,11 +22,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.main {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 
 .container {
   width: 100%;
@@ -38,6 +38,6 @@
 
 footer.container {
   padding: 2.25em 0;
-  margin-top: auto;
+  margin-top: 200px;
   border-top: 1px solid rgb(219, 219, 219);
 }

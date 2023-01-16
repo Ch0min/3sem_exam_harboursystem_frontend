@@ -6,7 +6,7 @@ function SignInBtn() {
 
     return (
         <div className="login-container">
-            <button onClick={() => navigate("/signin")}>Sign In</button>
+            <button onClick={() => navigate("/signin")}>LOGIN</button>
         </div>
     );
 }
