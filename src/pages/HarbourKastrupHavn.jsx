@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import boatFacade from "../utils/boatFacade.js";
+import BtnViewOwners from "../components/BtnViewOwners.jsx";
 
 function HarbourKastrupHavn(props) {
     const [boats, setBoats] = useState([])
@@ -37,34 +38,9 @@ function HarbourKastrupHavn(props) {
                                 <td>{data.boatName}</td>
                                 <td>{data.boatImage}</td>
                                 <td>
-                                    {!clicked ? <button onClick={() => {
-                                            setViewOwners(data.boatID)
-                                            setClicked(true)
-                                        }}
-                                        >Show Owners
-                                        </button> :
-                                        <button onClick={() => {
-                                            setViewOwners(0)
-                                            setClicked(false)
-                                        }}
-                                        >Hide
-                                        </button>}
+                                    <BtnViewOwners boats={data} viewOwners={viewOwners} setViewOwners={setViewOwners}
+                                                   clicked={clicked} setClicked={setClicked}/>
                                 </td>
-                                {data.owners.map((owner) => {
-
-                                        if (data.boatID === viewOwners) {
-
-                                            return (
-                                                    <tr key={owner.ownerID}>
-                                                        <td>{owner.user.userName}</td>
-                                                        <td>{owner.ownerName}</td>
-                                                        <td>{owner.ownerPhone}</td>
-                                                        <td>{owner.ownerAddress}</td>
-                                                    </tr>
-                                            )
-                                        }
-                                    }
-                                )}
                             </tr>
                         )
                     }

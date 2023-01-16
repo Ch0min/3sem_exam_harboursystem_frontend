@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import boatFacade from "../utils/boatFacade.js";
 
 import "../styles/styles.css";
+import BtnViewOwners from "../components/BtnViewOwners.jsx";
 
 function HarbourKoegeMarina(props) {
     const [boats, setBoats] = useState([])
@@ -27,46 +28,25 @@ function HarbourKoegeMarina(props) {
                     <th>MAKE</th>
                     <th>BOAT NAME</th>
                     <th>IMAGE</th>
+                    <th>OWNERS</th>
                 </tr>
                 </thead>
                 <tbody>
                 {boats.map((data) => {
-                    return (
-                        <tr key={data.boatID}>
-                            <td>{data.boatBrand}</td>
-                            <td>{data.boatMake}</td>
-                            <td>{data.boatName}</td>
-                            <td>{data.boatImage}</td>
-                            <td>
-                                {!clicked ? <button onClick={() => {
-                                        setViewOwners(data.boatID)
-                                        setClicked(true)
-                                    }}
-                                    >Show Owners
-                                    </button> :
-                                    <button onClick={() => {
-                                        setViewOwners(0)
-                                        setClicked(false)
-                                    }}
-                                    >Hide
-                                    </button>}
-                            </td>
-                            {data.owners.map((owner) => {
-                                    if (data.boatID === viewOwners) {
-                                        return (
-                                            <tr key={owner.ownerID}>
-                                                <td>{owner.user.userName}</td>
-                                                <td>{owner.ownerName}</td>
-                                                <td>{owner.ownerPhone}</td>
-                                                <td>{owner.ownerAddress}</td>
-                                            </tr>
-                                        )
-                                    }
-                                }
-                            )}
-                        </tr>
-                    )
-                })}
+                        return (
+                            <tr key={data.boatID}>
+                                <td>{data.boatBrand}</td>
+                                <td>{data.boatMake}</td>
+                                <td>{data.boatName}</td>
+                                <td>{data.boatImage}</td>
+                                <td>
+                                    <BtnViewOwners boats={data} viewOwners={viewOwners} setViewOwners={setViewOwners}
+                                                   clicked={clicked} setClicked={setClicked}/>
+                                </td>
+                            </tr>
+                        )
+                    }
+                )}
                 </tbody>
             </table>
         </div>
